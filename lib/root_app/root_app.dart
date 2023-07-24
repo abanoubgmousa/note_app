@@ -8,10 +8,7 @@ class Rootapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          brightness: Brightness.dark,
-          scaffoldBackgroundColor: Colors.blueGrey,
-          appBarTheme: const AppBarTheme(backgroundColor: Colors.amber)),
+      theme: ThemeData(brightness: Brightness.dark),
       home: const HomeScreen(),
     );
   }

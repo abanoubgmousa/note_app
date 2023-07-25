@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/conponants/app_bar_widget.dart';
-import 'package:note_app/conponants/list_view_notes.dart';
+import 'package:note_app/conponants/first_screen/app_bar_widget.dart';
+import 'package:note_app/conponants/first_screen/list_view_notes.dart';
 
 class BodyWidget extends StatelessWidget {
   const BodyWidget({super.key});

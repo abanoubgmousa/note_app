@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/conponants/custom_widgets/custom_view/custom_note_item.dart';
 
-class ListViewNotes extends StatelessWidget {
-  const ListViewNotes({super.key});
+class ListViewNotesbulider extends StatelessWidget {
+  const ListViewNotesbulider({super.key});
   final data = const [];
   @override
   Widget build(BuildContext context) {

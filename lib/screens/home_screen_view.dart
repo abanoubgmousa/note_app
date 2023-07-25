@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/conponants/first_screen/body_view_screen.dart';
+import 'package:note_app/conponants/first_screen/body_view_screen_bulider.dart';
 import 'package:note_app/conponants/custom_widgets/custom_bottom_sheet_folder/custom_bottom_sheet.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreenView extends StatelessWidget {
+  const HomeScreenView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const BodyViewScreen(),
+      body: const BodyViewScreenBulider(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(

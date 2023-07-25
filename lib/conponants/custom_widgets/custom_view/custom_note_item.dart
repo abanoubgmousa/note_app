@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:note_app/conponants/second_screen/edit_note_view.dart';
+import 'package:note_app/screens/edit_note_screen_view.dart';
 
 class CustomNoteItem extends StatelessWidget {
   const CustomNoteItem({super.key});
@@ -9,8 +9,8 @@ class CustomNoteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const EditNoteView()));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => const EditNoteScreenView()));
       },
       child: Container(
         padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),

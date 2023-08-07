@@ -17,11 +17,11 @@ class AddNoteCubit extends Cubit<AddNoteState> {
     try {
       Box notesBox = Hive.box<NoteModel>(kNotesBox);
       isLoading = false;
-      emit(AddNoteSuccsess());
       await notesBox.add(note);
+      emit(AddNoteSuccsess());
     } on Exception catch (e) {
       isLoading = false;
-      AddNoteFailure(e.toString());
+      emit(AddNoteFailure(e.toString()));
     }
   }
 }

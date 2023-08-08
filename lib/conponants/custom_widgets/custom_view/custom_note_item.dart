@@ -36,11 +36,13 @@ class CustomNoteItem extends StatelessWidget {
                         color: Colors.black.withOpacity(.5), fontSize: 18)),
               ),
               trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    noteModel.delete();
+                  },
                   icon: const Icon(
                     FontAwesomeIcons.trash,
                     color: Colors.black,
-                    size: 24,
+                    size: 30,
                   )),
             ),
             dateBulider(),

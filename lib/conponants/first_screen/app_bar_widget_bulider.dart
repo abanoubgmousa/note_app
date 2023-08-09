@@ -3,9 +3,10 @@ import 'package:note_app/conponants/custom_widgets/custom_view/custom_search_ico
 
 class AppBarWidgetBulider extends StatelessWidget {
   const AppBarWidgetBulider(
-      {super.key, required this.title, required this.icon});
+      {super.key, required this.title, required this.icon, this.onPressed});
   final String title;
   final IconData icon;
+  final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -16,6 +17,7 @@ class AppBarWidgetBulider extends StatelessWidget {
           style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
         CustomSearchIcon(
+          onPressed: onPressed,
           icon: icon,
         )
       ],

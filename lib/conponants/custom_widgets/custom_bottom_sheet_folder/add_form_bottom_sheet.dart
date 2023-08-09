@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:note_app/conponants/custom_widgets/color_item_picker/colors_list_view.dart';
 import 'package:note_app/conponants/custom_widgets/custom_bottom_sheet_folder/custom_add_button.dart';
 import 'package:note_app/conponants/custom_widgets/custom_bottom_sheet_folder/custom_text_field.dart';
 import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
@@ -45,6 +46,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subTitle = value;
             },
           ),
+          const SizedBox(height: 10),
+          const ColorsListView(),
           const SizedBox(height: 30),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {

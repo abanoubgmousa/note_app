@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:note_app/conponants/custom_widgets/color_item_picker/edit_notes_colors_list.dart';
 import 'package:note_app/conponants/custom_widgets/custom_bottom_sheet_folder/custom_text_field.dart';
 import 'package:note_app/conponants/first_screen/app_bar_widget_bulider.dart';
 import 'package:note_app/cubits/create_note_cubit/create_note_cubit.dart';
@@ -53,6 +54,12 @@ class _EditNoteViewBuliderState extends State<EditNoteViewBulider> {
               },
               hintText: widget.note.subTitle,
               maxLines: 5),
+          const SizedBox(
+            height: 16,
+          ),
+          EditNotesColorsList(
+            note: widget.note,
+          )
         ],
       ),
     );

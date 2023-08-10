@@ -6,28 +6,27 @@ import 'package:note_app/models/note_model.dart';
 import 'package:note_app/screens/edit_note_screen_view.dart';
 
 class CustomNoteItem extends StatelessWidget {
-  const CustomNoteItem({super.key, required this.noteModel});
-  final NoteModel noteModel;
+  const CustomNoteItem({super.key, required this.note});
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => EditNoteScreenView(
-                  note: noteModel,
+                  note: note,
                 )));
       },
       child: Container(
         padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),
         decoration: BoxDecoration(
-            color: Color(noteModel.color),
-            borderRadius: BorderRadius.circular(16)),
+            color: Color(note.color), borderRadius: BorderRadius.circular(16)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               title: Text(
-                noteModel.title,
+                note.title,
                 style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -35,13 +34,13 @@ class CustomNoteItem extends StatelessWidget {
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
-                child: Text(noteModel.subTitle,
+                child: Text(note.subTitle,
                     style: TextStyle(
                         color: Colors.black.withOpacity(.5), fontSize: 18)),
               ),
               trailing: IconButton(
                   onPressed: () {
-                    noteModel.delete();
+                    note.delete();
                     BlocProvider.of<CreateNoteCubit>(context).fetchAllNotes();
                   },
                   icon: const Icon(
@@ -62,7 +61,7 @@ class CustomNoteItem extends StatelessWidget {
       padding: const EdgeInsets.only(
         right: 24,
       ),
-      child: Text(noteModel.date,
+      child: Text(note.date,
           style: TextStyle(fontSize: 16, color: Colors.black.withOpacity(.4))),
     );
   }
